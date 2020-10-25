@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'myawards',
     'crispy_forms',
     'rest_framework',
-    'pyuploadcare.dj',
+    #'pyuploadcare.dj',
 ]
 
 
