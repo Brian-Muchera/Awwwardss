@@ -79,6 +79,7 @@ def signup(request):
             email.send()
             messages.success(request, 'Account was created.')
             return HttpResponse('We have sent you an email, please confirm your email address to complete registration')
+            return redirect('login')
     else:
         form = SignupForm()
     return render(request, 'registration/signup.html', {'form': form})
