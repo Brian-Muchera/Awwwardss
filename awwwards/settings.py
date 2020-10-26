@@ -148,8 +148,6 @@ LOGIN_REDIRECT_URL = 'index'
 
 LOGOUT_REDIRECT_URL = 'index'
 
-SIGNUP_REDIRECT_URL = 'index'
-
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
