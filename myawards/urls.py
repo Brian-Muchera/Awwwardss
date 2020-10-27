@@ -12,8 +12,8 @@ router.register('profile', views.ProfileViewSet)
 urlpatterns = [
     path('', views.index, name='index'),
     path('signup/', views.signup, name='signup'),
-    url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
-        views.activate, name='activate'),
+   # url(r'^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+       # views.activate, name='activate'),
     path('account/', include('django.contrib.auth.urls')),
     path('api/', include(router.urls)),
     path('<username>/profile', views.user_profile, name='userprofile'),
@@ -22,6 +22,7 @@ urlpatterns = [
     path('profile/<username>/settings', views.edit_profile, name='edit'),
     path('project/<post>', views.project, name='project'),
     path('search/', views.search_project, name='search'),
+   # path('login_required/' , views.login_required, name='login'),
 
     path('reset_password/',
      auth_views.PasswordResetView.as_view(template_name="myawards/password_reset.html"),
